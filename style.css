@@ -79,6 +79,9 @@ ul, li {
     border-radius: 12px;
     background-color: hsl(235, 46%, 20%);
     padding: 1.8em;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
 }
 
 .title {
@@ -86,15 +89,24 @@ ul, li {
     font-weight: 400;
 }
 
+.dots {
+    font-size: 1.2em;
+    font-weight: 500;
+    letter-spacing: 3px;
+    text-align: right;
+}
+
 .time {
     font-size: 3.5em;
     font-weight: 300;
     padding: 0.5em 0 0.2em 0;
+    grid-row: 2 / span 2;
 }
 
 .last-results {
     color: hsl(235, 45%, 61%);
     font-size: 0.8em;
+    grid-row: 3 / span 2;
 }
 
 .work {
@@ -137,9 +149,172 @@ ul, li {
     background-repeat: no-repeat;
     background-position-x: right;
     background-color: #f1c75b;
+
 }
 
+@media screen and (max-width: 600px){
 
+    body {
+        width: 100vw;
+        height: fit-content;
+        background-color: hsl(226, 43%, 10%);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 5em 0;
+    }
+
+    section {
+        width: 90%;
+        height: fit-content;
+        display: flex;
+        flex-direction: column;
+        color: #FFF;
+        gap: 25px;
+    }
+
+    /* defines user info */
+    .user-info {
+        border-radius: 15px;
+        background-color: hsl(235, 46%, 20%);
+        padding: 0;
+    }
+
+    img {
+        width: 5em;
+        border: 3px solid #FFF;
+        border-radius: 50%;
+        margin-bottom: 3em;
+        grid-row: 1 / span 3;
+        vertical-align: middle;
+
+    }
+
+    .user-name {
+        background-color: hsl(246, 80%, 60%);
+        border-radius: 13px;
+        padding: 2rem;
+        display: grid;
+        grid-template-columns: 1.5fr 3fr;
+        grid-template-rows: 0.2fr 0.2fr 0.2fr;
+    }
+
+    .report-title {
+        color: hsl(236, 100%, 87%);
+        justify-content: flex-end;
+        margin-bottom: 5px;
+        grid-row: 2;
+    }
+
+    .name {
+        font-size: 1.5em;
+        font-weight: 300;
+        justify-content: flex-end;
+        grid-row: 3;
+    }
+
+    .user-info ul {
+        list-style: none;
+        display: flex;
+        justify-content: space-between;
+        align-content: center;
+        margin: 0 0 1em 0;
+    }
+
+    ul, li {
+        display: inline-block;
+    }
+
+    .work, .play, .study, .exercise, .social, .self-care {
+        background: hsl(0, 0%, 100%);
+        border-radius: 15px;
+        height: 10rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: end;
+    }
+
+    .content {
+        height: 75%;
+        border-radius: 12px;
+        background-color: hsl(235, 46%, 20%);
+        padding: 1.5em 2em 2em 2em;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        align-items: center;
+    }
+
+    .work {
+        background: url('./images/icon-work.svg');
+        background-repeat: no-repeat;
+        background-position-x: right;
+        background-color: #ff8b64;
+    }
+
+    .play {
+        background: url('./images/icon-play.svg');
+        background-repeat: no-repeat;
+        background-position-x: right;
+        background-color: #56c2e6;
+    }
+
+    .study {
+        background: url('./images/icon-study.svg');
+        background-repeat: no-repeat;
+        background-position-x: right;
+        background-color: #ff5e7d;
+    }
+
+    .exercise {
+        background: url('./images/icon-exercise.svg');
+        background-repeat: no-repeat;
+        background-position-x: right;
+        background-color: #4bcf83;
+    }
+
+    .social {
+        background: url('./images/icon-social.svg');
+        background-repeat: no-repeat;
+        background-position-x: right;
+        background-color: #7235d2;
+    }
+
+    .self-care {
+        background: url('./images/icon-self-care.svg');
+        background-repeat: no-repeat;
+        background-position-x: right;
+        background-color: #f1c75b;
+    }
+
+    .title {
+        font-size: 1.2em;
+        font-weight: 400;
+    }
+
+    .dots {
+        font-size: 1.2em;
+        font-weight: 500;
+        text-align: right;
+        letter-spacing: 3px;
+    }
+
+    .time {
+        font-size: 2.5em;
+        font-weight: 300;
+        margin: 0;
+        line-height: 0.5em;
+    }
+
+    .last-results {
+        color: hsl(235, 45%, 61%);
+        font-size: 0.8em;
+        text-align: right;
+        line-height: 4em;
+    }
+
+
+}
 
 
 
