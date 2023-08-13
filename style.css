@@ -76,6 +76,7 @@ img {
 
 ul, li {
     /*display: inline-block;*/
+    cursor: pointer;
 }
 
 .work, .play, .study, .exercise, .social, .self-care {
