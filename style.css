@@ -74,9 +74,14 @@ img {
     margin: 1em 2em;
 }
 
-ul, li {
-    /*display: inline-block;*/
+nav ul li {
     cursor: pointer;
+    color: #fff;
+    text-decoration: none;
+}
+
+.active {
+    color:hsl(236, 100%, 87%);
 }
 
 .work, .play, .study, .exercise, .social, .self-care {
@@ -232,8 +237,16 @@ ul, li {
         margin: 2em;
     }
 
-    ul, li {
+    nav ul li {
         height: 2.5em;
+    }
+
+    nav ul li a:hover {
+        color:hsl(236, 100%, 87%);
+    }
+
+    .active {
+        color:hsl(236, 100%, 87%);
     }
 
     .work, .play, .study, .exercise, .social, .self-care {
